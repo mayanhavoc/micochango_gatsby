@@ -7,6 +7,7 @@ module.exports = {
       author: 'Roberto Mayen-Hess'
   },
   plugins: [
+      'gatsby-plugin-react-helmet',
       {
           resolve: 'gatsby-source-contentful',
           options: {

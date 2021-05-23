@@ -4,12 +4,13 @@ import React from 'react';
 import Layout from '../components/Layout'
 import * as indexStyles from '../components/index.module.scss';
 import { FaRegPaperPlane } from "react-icons/fa";
-
+import Head from '../components/head'
 
 // Step 2: Define your component
 const IndexPage = () => {
   return (
     <Layout>
+      <Head title="Home"/>
       <h1 className={indexStyles.display1} style={{marginLeft: '0.5rem'}}>Hello!</h1>
       <div className={indexStyles.tagSection}>
         <div style={{display: 'flex', alignItems:'center', margin: '1rem',}}>
