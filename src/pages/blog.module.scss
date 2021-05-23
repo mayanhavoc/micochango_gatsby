@@ -1,0 +1,32 @@
+.posts {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.post {
+    margin: 1rem 0;
+    h2, p {
+        display: block;
+        padding: 1rem 0;
+    }
+    h2 {
+        margin-bottom: 0;
+        padding-bottom: 0.5rem; 
+    }
+
+    h2:hover {
+        cursor: pointer;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    p {
+        font-size: 0.8rem;
+        font-style: italic;
+        margin-top: 0;
+        padding-top: 0.5rem;
+    }
+}
