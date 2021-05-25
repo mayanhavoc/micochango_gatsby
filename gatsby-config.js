@@ -1,12 +1,18 @@
+
+
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`
 });
+
 module.exports = {
   siteMetadata: {
       title: 'micochango',
       author: 'Roberto Mayen-Hess'
   },
     plugins: [
+        `gatsby-plugin-image`,
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
         'gatsby-plugin-react-helmet',
         {
             resolve: 'gatsby-source-contentful',
@@ -20,7 +26,7 @@ module.exports = {
             resolve: 'gatsby-source-filesystem',
             options: {
              name: 'src',
-                path: `${__dirname}/src/`
+                path: `${__dirname}/src/`,
             }
         },
         'gatsby-plugin-sharp',

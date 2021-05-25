@@ -6,6 +6,8 @@ import * as indexStyles from '../components/index.module.scss';
 import { FaRegPaperPlane } from "react-icons/fa";
 import Head from '../components/head'
 
+
+
 // Step 2: Define your component
 const IndexPage = () => {
   return (
