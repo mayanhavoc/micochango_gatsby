@@ -4,7 +4,7 @@ date: "2021-05-22"
 ---
 
 
-![Roberto Mayen-Hess](./images/Profile-pic.png)
+![Roberto Mayen-Hess](./Profile-pic.png)
 
 ### What modules do we need to make authentication work? 
 - passport -> this is the most important

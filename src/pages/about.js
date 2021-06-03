@@ -2,31 +2,29 @@ import React from 'react';
 // import { Link } from 'gatsby';
 import Layout from '../components/Layout';
 import Head from '../components/head';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import * as aboutStyles from '../styles/index.scss';
 
 
 const AboutPage = () => {
     return (
         <Layout>
           <Head title="About"/>
-          <Container fluid>
-            <Row>
-              <Col sm={4}>
-                <div class="pop-up">
+          <div>
+            <div>
+              <div>
+                <div className="pop-up">
                   <h2>About me</h2>
                   <p>Former lawyer transitioning into software development. I have extensive project  management experience and have helped hundreds of entrepreneurs build their startups.    I am currently finishing an MBA degree with a focus on venture capital and     entrepreneurship. My purpose is to empower change-makers, innovators and visionaries    by providing the tools to bring about positive change.</p>
                 </div>
-              </Col>        
-              <Col sm={8}>
+              </div>        
+              <div sm={8}>
                 <img src="/Profile-pic.png" style={{ maxWidth: '100%'}} alt="Roberto Mayen-Hess"/>
-              </Col>
-            </Row>
-            <Row>
-            <div class="item item-3">
+              </div>
+            </div>
+            <div className='grid-2'>
+            <div className="item item-3">
               <h2>Skills</h2>
-              <ul class="pop-up two-columns">
+              <ul className="pop-up">
                   <li>Project management</li>
                   <li>Web development</li>
                   <li>Business management</li>
@@ -43,25 +41,25 @@ const AboutPage = () => {
                   <li> NodeJS and React</li>
               </ul>
           </div>
-          <div class="item item-4">
+          <div className="item item-4">
             <div>
                 <h2>Education</h2>
             </div>
-            <div class="pop-up">
-                <h3 class="m-2">MBA candidate</h3>
+            <div className="pop-up">
+                <h3 className="m-2">MBA candidate</h3>
                 <h4>Specialization: entrepreneurship and innovation</h4>
                 <span>2019 - present | University of London, United Kingdom</span>
             </div>
-            <div class="pop-up">
-                <h3 class="m-1">Attorney and notary</h3>
+            <div className="pop-up">
+                <h3 className="m-1">Attorney and notary</h3>
                 <span>2004 - 2009 | Universidad Francisco Marroquín, Guatemala</span>
             </div>
           </div>
-          </Row>
-          <Row>
-          <div class="item item-5">
+          </div>
+          <div className="grid-2">
+          <div className="item item-5">
               <h2>Work experience</h2>
-              <div class="pop-up">
+              <div className="pop-up">
                   <h3>Software Developer</h3>
                   <span>2020 - present | Maka Mobile, Netherlands (remote)</span>
                   <p>Develop user-focused, responsive digital solutions using cutting-edge techniques and tools. 
@@ -112,15 +110,15 @@ const AboutPage = () => {
                   <span>I can read and write <span><em class="emphasis">spanish</em></span> and <span><em class="emphasis">english</em></span> fluently.</span>
                 </div>
             </div>
-            </Row>
-            <Row>
+            </div>
+            <div>
         <footer>
             <span class="text-muted">references available upon request</span>
             <span class="text-muted">v.april.2021</span>
         </footer>
         <div class="line-1"></div>
-          </Row>
-        </Container>         
+          </div>
+        </div>         
         </Layout>
     )
 }

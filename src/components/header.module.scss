@@ -2,16 +2,18 @@
 
 $primary-color: #CB0024;
 $secondary-color: #F7F7F2;
+$dark-color: #210F04;
 $primary-font: 'Roboto', sans-serif;
 
 * {
-    color: $secondary-color;
+    color:$dark-color;
     font-family: $primary-font;
 }
 
 html {
-    background-color: $primary-color;
+    background-color: #F5B800;
 }
+
 
 .header {
     padding: 1rem 0 3rem;
@@ -41,7 +43,7 @@ html {
 }
 
 .active-nav-item {
-    display:none;
+    color: grey;
 }
 
 
