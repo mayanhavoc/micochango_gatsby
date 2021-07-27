@@ -15,11 +15,11 @@ const Layout = (props) => {
             <div className={layoutStyles.content}>
                 <Header />
                 {props.children}
-            </div>
             <About />
             <Work />
             <Blog />
             <Contact />
+            </div>
             <Footer />
         </div>
     )
