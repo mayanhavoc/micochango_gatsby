@@ -1,6 +1,12 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import About from '../pages/about';
+import Work from '../pages/work';
+import Blog from '../pages/blog';
+import Contact from '../pages/contact';
+
+
 import * as layoutStyles from '../components/layout.module.scss';
 
 const Layout = (props) => {
@@ -10,6 +16,10 @@ const Layout = (props) => {
                 <Header />
                 {props.children}
             </div>
+            <About />
+            <Work />
+            <Blog />
+            <Contact />
             <Footer />
         </div>
     )
