@@ -1,19 +1,19 @@
 import React from 'react';
 // import { Link } from 'gatsby';
-import Layout from '../components/Layout';
+import * as layoutStyles from '../components/layout.module.scss';
+import * as aboutStyles from './about.module.scss';
 import Head from '../components/head';
-import * as aboutStyles from '../styles/index.scss';
 
 
 const AboutPage = () => {
     return (
-        <Layout>
-          <Head title="About"/>
-          <div>
+        <>
+          <Head title="About" />
+          <div className={layoutStyles.container} id="about" >
+          <h2>About me</h2>
             <div>
-              <div>
-                <div className="pop-up">
-                  <h2>About me</h2>
+              <div> 
+                <div className={aboutStyles.popUp}>
                   <p>Former lawyer transitioning into software development. I have extensive project  management experience and have helped hundreds of entrepreneurs build their startups.    I am currently finishing an MBA degree with a focus on venture capital and     entrepreneurship. My purpose is to empower change-makers, innovators and visionaries    by providing the tools to bring about positive change.</p>
                 </div>
               </div>        
@@ -21,10 +21,10 @@ const AboutPage = () => {
                 <img src="/Profile-pic.png" style={{ maxWidth: '100%'}} alt="Roberto Mayen-Hess"/>
               </div>
             </div>
-            <div className='grid-2'>
-            <div className="item item-3">
+            <div className={aboutStyles.grid2}>
+            <div className={`aboutStyles.item aboutStyles.item-3`}>
               <h2>Skills</h2>
-              <ul className="pop-up">
+              <ul className={`popUp .grid2`}>
                   <li>Project management</li>
                   <li>Web development</li>
                   <li>Business management</li>
@@ -119,7 +119,7 @@ const AboutPage = () => {
         <div class="line-1"></div>
           </div>
         </div>         
-        </Layout>
+        </>
     )
 }
 
