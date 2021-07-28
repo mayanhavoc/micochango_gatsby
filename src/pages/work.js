@@ -1,19 +1,17 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Layout from '../components/Layout';
 import Head from '../components/head';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+// import './work.css'
+import * as layoutStyles from '../components/layout.module.scss';
 
 
 const WorkPage = () => {
     return (
-        <Layout>
-          <Head title="About"/>
-          <body>
+        <>
+          <Head title="Work"/>
+          <div className={layoutStyles.container} id='work'>
             <div class="portfolio-list">
-               <div class="container">
+               <div >
                    <h1 class="oleez-page-title wow fadeInUp">Recent projects</h1>
                     <article class="project">
                        <div class="row">
@@ -69,8 +67,8 @@ const WorkPage = () => {
                    </article>
                </div>
             </div>
-        </body>
-        </Layout>
+        </div>
+        </>
     )
 }
 

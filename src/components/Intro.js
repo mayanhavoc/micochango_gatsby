@@ -1,18 +1,53 @@
 import React from 'react'
-// import { Link } from 'gatsby';
-import * as introStyles from '../components/about.module.scss';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image'
+import { Link } from 'gatsby';
+import { DiGithubFull } from "react-icons/di";
+import * as introStyles from '../pages/about.module.scss';
+
 
 
 const Intro = () => {
+    const data = useStaticQuery(graphql`
+        query Images {
+            image: file(relativePath: {eq: "micochango-face.png"}) {
+                id
+                childImageSharp {
+                    fixed {
+                        ...GatsbyImageSharpFixed
+                    }
+                    fluid {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+        }
+    `)
+
     return (
-        <intro className={introStyles.grid-2}>
-            <div className={introStyles.item}>
-                <div className={introStyles.popUp}>
-                    <h2>About me</h2>
-                    <p>Former lawyer transitioning into     software development. I have  extensive   project management experience and have helped hundreds of entrepreneurs build their startups. I am currently finishing an MBA degree with a focus on venture capital  and entrepreneurship. My purpose is to empower change-makers, innovators and visionaries    by providing them the tools to bring about positive change. </p>
+        <div>
+            <div className={introStyles.grid2}>
+                <div className={introStyles.item}>
+                    <div className={introStyles.popUp}>
+                    <Img
+                    fluid = {data.image.childImageSharp.fluid} 
+                    />
+                    </div>
                 </div>
-            </div>  
-        </intro>
+                <div className={introStyles.item}>
+                    <div className={introStyles.popUp}>
+                        <h2>better</h2>
+                        <h2>business</h2>
+                        <h2>solutions</h2>
+                        <h2>through</h2>
+                        <h2>code</h2>
+                    </div>
+                </div>  
+            </div>
+            <Link to="https://github.com/micochango" >
+            <DiGithubFull size={'6rem'} />
+            </Link>
+        </div>
     )
 };
 

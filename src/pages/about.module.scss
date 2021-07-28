@@ -104,7 +104,7 @@ h1 {
     padding: 10px;
 }
 
-.pop-up:hover {
+.popUp:hover {
     cursor: pointer;
     transform: scale(1.01);
 }
@@ -188,7 +188,7 @@ h4, p, span, li {
 
 body {
     max-width: 100vw;
-    margin: 100px;
+    margin: 10px;
 }
 
 .container { 
@@ -279,7 +279,7 @@ img {
 }
 
 
-.two-columns {
+.twoColumns {
     display: grid;
     grid-template-columns: 40% 50%;
     justify-items: stretch;
@@ -306,14 +306,14 @@ footer {
         flex-direction: column; 
         min-width: 100%;
     }
-    .two-columns {
+    .twoColumns {
         display: flex;
         flex-direction: column;
     }
 }
 
 /* Grid */
-.grid-2 {
+.grid2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
